@@ -10,14 +10,15 @@
 
 #include <map>
 #include <iostream>
+#include <memory>
 template<typename T>
 class DataKeeper{
-    std::map<int, T> m_data;
+    std::map<int, std::shared_ptr<T>> m_data; //id to element
 public:
-    bool Save(T element){
+    bool Save(std::shared_ptr<T> element){
         if(!is_exist(element)){
             try{
-                m_data[element.Get_ID()] = element;
+                m_data[element->Get_ID()] = element;
                 std::cout << "Successfull saving!\n";
             }
             catch(...){
@@ -32,8 +33,8 @@ public:
         }
     }
     
-    bool is_exist(T element){
-        if(m_data.find(element.Get_ID()) == m_data.end()){
+    bool is_exist(std::shared_ptr<T> element){
+        if(m_data.find(element->Get_ID()) == m_data.end()){
             return false;
         }
         return true;
