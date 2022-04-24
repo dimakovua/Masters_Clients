@@ -10,3 +10,5 @@
 
 int Client::Client_ID = 0;
 int Master::Master_ID = 0;
+int Device::Device_ID = 0;
+int Service::Service_ID = 0;

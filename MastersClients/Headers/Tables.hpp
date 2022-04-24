@@ -83,4 +83,57 @@ public:
         return m_id;
     }
 };
+
+class Device{
+    static int Device_ID;
+    int m_id;
+    std::string m_name;
+    std::string m_model;
+    std::string m_breakage;
+public:
+    Device(std::string name, std::string model, std::string breakage) : m_name(name), m_model(model), m_breakage(breakage){
+        Device_ID++;
+        m_id = Device_ID;
+    }
+    std::string Get_name(){
+        return m_name;
+    }
+    std::string Get_model(){
+        return m_model;
+    }
+    std::string Get_breakage(){
+        return m_breakage;
+    }
+    int Get_ID(){
+        return m_id;
+    }
+};
+
+class Service{
+private:
+    std::string m_service_name;
+    std::string m_time;
+    std::string m_cost;
+    static int Service_ID;
+    int m_id;
+public:
+    Service(std::string service_name, std::string time, std::string cost) : m_service_name(service_name), m_time(time), m_cost(cost){
+        Service_ID++;
+        m_id = Service_ID;
+    }
+    std::string Get_name(){
+        return m_service_name;
+    }
+    std::string Get_time(){
+        return m_time;
+    }
+    std::string Get_cost(){
+        return m_cost;
+    }
+    int Get_ID(){
+        return m_id;
+    }
+};
+
+
 #endif /* Tables_h */
