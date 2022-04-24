@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E8422D85281590BA0040C578 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8422D84281590BA0040C578 /* main.cpp */; };
+		E8422D8F281591430040C578 /* Tables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8422D8E281591430040C578 /* Tables.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		E8422D81281590BA0040C578 /* MastersClients */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MastersClients; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8422D84281590BA0040C578 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E8422D8D2815912C0040C578 /* Tables.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tables.hpp; sourceTree = "<group>"; };
+		E8422D8E281591430040C578 /* Tables.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tables.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +60,27 @@
 		E8422D83281590BA0040C578 /* MastersClients */ = {
 			isa = PBXGroup;
 			children = (
+				E8422D8C281591180040C578 /* Source */,
+				E8422D8B2815910D0040C578 /* Headers */,
 				E8422D84281590BA0040C578 /* main.cpp */,
 			);
 			path = MastersClients;
+			sourceTree = "<group>";
+		};
+		E8422D8B2815910D0040C578 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				E8422D8D2815912C0040C578 /* Tables.hpp */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		E8422D8C281591180040C578 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E8422D8E281591430040C578 /* Tables.cpp */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8422D8F281591430040C578 /* Tables.cpp in Sources */,
 				E8422D85281590BA0040C578 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
