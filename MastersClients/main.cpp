@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Headers/Tables.hpp"
+#include "Headers/DataKeeper.hpp"
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n";
@@ -12,5 +13,15 @@ int main(int argc, const char * argv[]) {
     Ownership own(1, 2);
     std::cout << own.Get_ID() << std::endl;
     Contract contr(10, 15, 14, "aboba", "aboba");
+    DataKeeper<Client> client_db;
+    client_db.Save(aboba);
+    client_db.Save(aboba1);
+    DataKeeper<Service> serv_db;
+    DataKeeper<Ownership> own_db;
+    DataKeeper<Contract> contr_db;
+    serv_db.Save(serv);
+    serv_db.Save(serv1);
+    own_db.Save(own);
+    contr_db.Save(contr);
     return 0;
 }
