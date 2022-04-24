@@ -9,5 +9,8 @@ int main(int argc, const char * argv[]) {
     Service serv("Name", "time", "cost");
     Service serv1("Name", "time", "cost");
     std::cout << "\n" << serv.Get_ID() << " " << serv1.Get_ID() << std::endl;
+    Ownership own(1, 2);
+    std::cout << own.Get_ID() << std::endl;
+    Contract contr(10, 15, 14, "aboba", "aboba");
     return 0;
 }
