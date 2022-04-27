@@ -16,6 +16,7 @@ class Tools{
 public:
     Tools();
     bool Add_m(std::string table_name, std::vector<std::string> args);
+    void Get_m(std::string table_name, std::string id);
 private:
     std::unique_ptr<DataBase> m_db;
 };

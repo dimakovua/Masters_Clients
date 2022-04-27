@@ -52,4 +52,12 @@ void Interface::DoStaff(){
             std::cout << "Error: " << ex.what() << std::endl;
         }
     }
+    if(what_to_do == "GET-M"){
+        std::string table_name = m_tokens[0];
+        try{
+            m_tools->Get_m(table_name, m_tokens[1]);
+        }catch(std::exception& ex){
+            std::cout << "Error: " << ex.what() << std::endl;
+        }
+    }
 }

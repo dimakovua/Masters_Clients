@@ -48,5 +48,6 @@ int main(int argc, const char * argv[]) {
     
     Interface interf;
     interf.Command_getter();
+    interf.Command_getter();
     return 0;
 }

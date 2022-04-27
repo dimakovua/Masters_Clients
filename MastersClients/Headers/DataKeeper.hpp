@@ -39,5 +39,13 @@ public:
         }
         return true;
     }
+    std::shared_ptr<T> Get(int ID){
+        if(m_data.find(ID) == m_data.end()){
+            throw std::runtime_error("Doesn't exist");
+        }
+        else{
+            return m_data[ID];
+        }
+    }
 };
 #endif /* DataKeeper_h */
