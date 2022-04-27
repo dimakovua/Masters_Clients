@@ -19,8 +19,8 @@ public:
         if(!is_exist(element)){
             try{
                 m_data[element->Get_ID()] = element;
-                std::cout << "Successfull saving!\n";
-            }
+                std::cout << "Successfull saving! ";
+            } //add ID and name of table!!!!!!!!!!!!
             catch(...){
                 std::cerr << "Saving Error!" << std::endl;
                 return false;

@@ -23,114 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BAC7FC1E-B36D-47A2-AF1F-D030C9F3B972"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MastersClients/Headers/DataKeeper.hpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "Save(element)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "BAC7FC1E-B36D-47A2-AF1F-D030C9F3B972 - dece5d8f351a5438"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DataKeeper&lt;Client&gt;::Save(std::__1::shared_ptr&lt;Client&gt;)"
-                  moduleName = "MastersClients"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dmytrokovalenko/Documents/MastersClients/MastersClients/Headers/DataKeeper.hpp"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "32">
-               </Location>
-               <Location
-                  uuid = "BAC7FC1E-B36D-47A2-AF1F-D030C9F3B972 - c4efb73607bd071e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DataKeeper&lt;Service&gt;::Save(std::__1::shared_ptr&lt;Service&gt;)"
-                  moduleName = "MastersClients"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dmytrokovalenko/Documents/MastersClients/MastersClients/Headers/DataKeeper.hpp"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "32">
-               </Location>
-               <Location
-                  uuid = "BAC7FC1E-B36D-47A2-AF1F-D030C9F3B972 - bdb969cc490051a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DataKeeper&lt;Device&gt;::Save(std::__1::shared_ptr&lt;Device&gt;)"
-                  moduleName = "MastersClients"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dmytrokovalenko/Documents/MastersClients/MastersClients/Headers/DataKeeper.hpp"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "32">
-               </Location>
-               <Location
-                  uuid = "BAC7FC1E-B36D-47A2-AF1F-D030C9F3B972 - f9ce20581a24617e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DataKeeper&lt;Ownership&gt;::Save(std::__1::shared_ptr&lt;Ownership&gt;)"
-                  moduleName = "MastersClients"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dmytrokovalenko/Documents/MastersClients/MastersClients/Headers/DataKeeper.hpp"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "32">
-               </Location>
-               <Location
-                  uuid = "BAC7FC1E-B36D-47A2-AF1F-D030C9F3B972 - 42e6fc6800aba122"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DataKeeper&lt;Master&gt;::Save(std::__1::shared_ptr&lt;Master&gt;)"
-                  moduleName = "MastersClients"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dmytrokovalenko/Documents/MastersClients/MastersClients/Headers/DataKeeper.hpp"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "32">
-               </Location>
-               <Location
-                  uuid = "BAC7FC1E-B36D-47A2-AF1F-D030C9F3B972 - e16b47879c8957a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DataKeeper&lt;Contract&gt;::Save(std::__1::shared_ptr&lt;Contract&gt;)"
-                  moduleName = "MastersClients"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dmytrokovalenko/Documents/MastersClients/MastersClients/Headers/DataKeeper.hpp"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "32">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "67F74ACC-6D18-4432-96DF-14258AF100F2"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -138,8 +30,8 @@
             filePath = "MastersClients/main.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "main(argc, argv)"
             landmarkType = "9">
          </BreakpointContent>

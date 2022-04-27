@@ -2,6 +2,7 @@
 #include "Headers/Tables.hpp"
 #include "Headers/DataKeeper.hpp"
 #include "Headers/Tools.hpp"
+#include "Headers/Interface.hpp"
 int main(int argc, const char * argv[]) {
 
     DataKeeper<Client> client_db;//
@@ -44,5 +45,8 @@ int main(int argc, const char * argv[]) {
     Tools aboba;
     bool a = aboba.Add_m("MASTER", {"peter", "a", "b", "c", "d", "e"});
     std::cout << "=======" << a << std::endl;
+    
+    Interface interf;
+    interf.Command_getter();
     return 0;
 }
