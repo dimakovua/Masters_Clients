@@ -43,6 +43,9 @@ public:
     int Get_ID(){
         return m_id;
     }
+    std::string Get_table_name(){
+        return "Client";
+    }
 };
 
 
@@ -88,6 +91,9 @@ public:
     int Get_ID(){
         return m_id;
     }
+    std::string Get_table_name(){
+        return "Master";
+    }
 };
 
 class Device{
@@ -115,6 +121,9 @@ public:
     }
     int Get_ID(){
         return m_id;
+    }
+    std::string Get_table_name(){
+        return "Device";
     }
 };
 
@@ -145,62 +154,71 @@ public:
     int Get_ID(){
         return m_id;
     }
+    std::string Get_table_name(){
+        return "Service";
+    }
 };
 
 class Ownership{
     static int Ownership_ID;
     int m_id;
-    int m_owner_id;
-    int m_device_id;
+    std::string m_owner_id;
+    std::string m_device_id;
 public:
     Ownership(){
         
     }
-    Ownership(int owner_id, int device_id) : m_owner_id(owner_id), m_device_id(device_id){
+    Ownership(std::string owner_id, std::string device_id) : m_owner_id(owner_id), m_device_id(device_id){
         Ownership_ID++;
         m_id = Ownership_ID;
     }
-    int Get_owner_id(){
+    std::string Get_owner_id(){
         return m_owner_id;
     }
-    int Get_device_id(){
+    std::string Get_device_id(){
         return m_device_id;
     }
     int Get_ID(){
         return m_id;
+    }
+    std::string Get_table_name(){
+        return "Ownership";
     }
 };
 
 class Specialization{
     static int Specialization_ID;
     int m_id;
-    int m_master_id;
-    int m_service_id;
+    std::string m_master_id;
+    std::string m_service_id;
 public:
     Specialization(){
         
     }
-    Specialization(int master_id, int service_id) : m_master_id(master_id), m_service_id(service_id){
+    Specialization(std::string master_id, std::string service_id) : m_master_id(master_id), m_service_id(service_id){
         Specialization_ID++;
         m_id = Specialization_ID;
     }
-    int Get_master_id(){
+    std::string Get_master_id(){
         return m_master_id;
     }
-    int Get_service_id(){
+    std::string Get_service_id(){
         return m_service_id;
     }
     int Get_ID(){
         return m_id;
+    }
+    std::string Get_table_name(){
+        return "Specialization";
     }
 };
 
 class Contract{
     static int Contract_ID;
     int m_id;
-    int m_service_id;
-    int m_master_id;
-    int m_client_id;
+    std::string m_service_id;
+    std::string m_master_id;
+    std::string m_client_id;
     std::string m_date;
     std::string m_status;
     
@@ -208,17 +226,17 @@ public:
     Contract(){
         
     }
-    Contract(int service_id, int master_id, int client_id, std::string date, std::string status) : m_service_id(service_id), m_master_id(master_id), m_client_id(client_id), m_date(date), m_status(status){
+    Contract(std::string service_id, std::string master_id, std::string client_id, std::string date, std::string status) : m_service_id(service_id), m_master_id(master_id), m_client_id(client_id), m_date(date), m_status(status){
         Contract_ID++;
         m_id = Contract_ID;
     }
-    int Get_service_id(){
+    std::string Get_service_id(){
         return m_service_id;
     }
-    int Get_master_id(){
+    std::string Get_master_id(){
         return m_master_id;
     }
-    int Get_client_id(){
+    std::string Get_client_id(){
         return m_client_id;
     }
     int Get_ID(){
@@ -229,6 +247,9 @@ public:
     }
     std::string Get_status(){
         return m_status;
+    }
+    std::string Get_table_name(){
+        return "Contract";
     }
 };
 #endif /* Tables_h */

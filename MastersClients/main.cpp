@@ -24,8 +24,8 @@ int main(int argc, const char * argv[]) {
     auto service_one = std::make_shared<Service>("Name", "time", "cost");
     auto service_two = std::make_shared<Service>("Notname", "nottime", "fuckcost");
     
-    auto contract_one = std::make_shared<Contract>(10, 15, 14, "aboba", "aboba");
-    auto ownership_one = std::make_shared<Ownership>(1,2);
+    auto contract_one = std::make_shared<Contract>("10", "15", "14", "aboba", "aboba");
+    auto ownership_one = std::make_shared<Ownership>("1","2");
     
     client_db.Save(client_one);
     client_db.Save(client_two);

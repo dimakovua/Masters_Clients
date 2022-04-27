@@ -39,7 +39,7 @@ void Interface::Parser(){
 }
 
 void Interface::DoStaff(){
-    std::string what_to_do = m_tokens[0];
+    std::string what_to_do = m_tokens[0]; //command
     m_tokens.erase(m_tokens.begin());
     
     if(what_to_do == "ADD-M"){

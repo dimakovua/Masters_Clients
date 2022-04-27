@@ -14,8 +14,12 @@ DataBase::DataBase(){
     contr_db = std::make_shared<DataKeeper<Contract>>();
     device_db = std::make_shared<DataKeeper<Device>>();
     master_db = std::make_shared<DataKeeper<Master>>();
+    special_db = std::make_shared<DataKeeper<Specialization>>();
 }
 
+std::shared_ptr<DataKeeper<Specialization>> DataBase::Get_special_db(){
+    return special_db;
+}
 std::shared_ptr<DataKeeper<Client>> DataBase::Get_client_db(){
     return client_db;
 }

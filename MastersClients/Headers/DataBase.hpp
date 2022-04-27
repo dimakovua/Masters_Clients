@@ -21,7 +21,9 @@ public:
     std::shared_ptr<DataKeeper<Contract>> Get_contract_db();
     std::shared_ptr<DataKeeper<Device>> Get_device_db();
     std::shared_ptr<DataKeeper<Master>> Get_master_db();
+    std::shared_ptr<DataKeeper<Specialization>> Get_special_db();
 private:
+    std::shared_ptr<DataKeeper<Specialization>> special_db;
     std::shared_ptr<DataKeeper<Client>> client_db;//
     std::shared_ptr<DataKeeper<Service>> serv_db;//
     std::shared_ptr<DataKeeper<Ownership>> own_db;
