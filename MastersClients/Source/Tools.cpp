@@ -33,12 +33,18 @@ bool Tools::Add_m(std::string table_name, std::vector<std::string> args){
         }
     }
     else if(table_name == "DEVICE"){
-        if(args.size() != 3){
+        if(args.size() < 3){
             throw std::runtime_error("Not enough args");
             return false;
         }
         else{
-            m_db->Get_device_db()->Save(std::make_shared<Device>(args[0], args[1], args[2]));
+            std::string descr = "";
+            for(int i = 2; i < args.size(); i++){
+                descr+=args[i];
+                descr+=" ";
+            }
+            descr.pop_back();
+            m_db->Get_device_db()->Save(std::make_shared<Device>(args[0], args[1], descr));
             return true;
         }
     }
