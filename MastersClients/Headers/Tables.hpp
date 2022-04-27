@@ -55,14 +55,14 @@ private:
     std::string m_phone_number;
     static int Master_ID;
     int m_id;
-    int m_experience;
-    int m_salary;
+    std::string m_experience;
+    std::string m_salary;
     std::string m_card;
 public:
     Master(){
         
     }
-    Master(std::string first_name, std::string last_name, std::string father_name, std::string phone_number, int exp,  int salary) : m_last_name(last_name), m_first_name(first_name), m_experience(exp), m_father_name(father_name), m_phone_number(phone_number), m_salary(salary){
+    Master(std::string first_name, std::string last_name, std::string father_name, std::string phone_number, std::string exp,  std::string salary) : m_last_name(last_name), m_first_name(first_name), m_experience(exp), m_father_name(father_name), m_phone_number(phone_number), m_salary(salary){
         Master_ID++;
         m_id = Master_ID;
     }
@@ -79,10 +79,10 @@ public:
     std::string Get_phone_number(){
         return m_phone_number;
     }
-    int Get_experience(){
+    std::string Get_experience(){
         return m_experience;
     }
-    int Get_Salary(){
+    std::string Get_Salary(){
         return m_salary;
     }
     int Get_ID(){

@@ -8,14 +8,16 @@
 #ifndef Tools_h
 #define Tools_h
 
-#include "DataKeeper.hpp"
-
-
-class Tool{
+#include "DataBase.hpp"
+#include <string>
+#include <vector>
+#include <stdexcept>
+class Tools{
 public:
-    Tool();
+    Tools();
+    bool Add_m(std::string table_name, std::vector<std::string> args);
 private:
-    
+    std::unique_ptr<DataBase> m_db;
 };
 
 

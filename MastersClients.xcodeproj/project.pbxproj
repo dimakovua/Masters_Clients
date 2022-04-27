@@ -10,6 +10,7 @@
 		E8422D85281590BA0040C578 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8422D84281590BA0040C578 /* main.cpp */; };
 		E8422D8F281591430040C578 /* Tables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8422D8E281591430040C578 /* Tables.cpp */; };
 		E8FA37AD28195BD400B96976 /* DataBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FA37AC28195BD400B96976 /* DataBase.cpp */; };
+		E8FA37B0281963B900B96976 /* Tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8FA37AF281963B900B96976 /* Tools.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,7 @@
 		E8FA37AA2819592800B96976 /* Tools.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tools.hpp; sourceTree = "<group>"; };
 		E8FA37AB28195BC000B96976 /* DataBase.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DataBase.hpp; sourceTree = "<group>"; };
 		E8FA37AC28195BD400B96976 /* DataBase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DataBase.cpp; sourceTree = "<group>"; };
+		E8FA37AF281963B900B96976 /* Tools.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tools.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			children = (
 				E8422D8E281591430040C578 /* Tables.cpp */,
 				E8FA37AC28195BD400B96976 /* DataBase.cpp */,
+				E8FA37AF281963B900B96976 /* Tools.cpp */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				E8422D8F281591430040C578 /* Tables.cpp in Sources */,
 				E8FA37AD28195BD400B96976 /* DataBase.cpp in Sources */,
 				E8422D85281590BA0040C578 /* main.cpp in Sources */,
+				E8FA37B0281963B900B96976 /* Tools.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
