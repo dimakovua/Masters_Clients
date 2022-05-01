@@ -235,4 +235,59 @@ void Tools::Get_s(std::string table_name, std::vector<std::string> fields){
             }
         }
     }
+    else if(table_name == "OWNERSHIP"){
+        auto el = m_db->Get_ownership_db()->Get(id);
+        for(auto field : fields){
+            if(field == "OWNER"){
+                std::cout << el->Get_owner_id() << std::endl;
+            }
+            else if(field == "DEVICE"){
+                std::cout << el->Get_device_id() << std::endl;
+            }
+            else{
+                std::cout << "Unknown field " << field << std::endl;
+            }
+        }
+    }
+    else if(table_name == "SPECIALIZATION" || table_name == "SPECIAL"){
+        auto el = m_db->Get_special_db()->Get(id);
+        for(auto field : fields){
+            if(field == "MASTER"){
+                std::cout << el->Get_master_id() << std::endl;
+            }
+            else if(field == "COST"){
+                std::cout << el->Get_service_id() << std::endl;
+            }
+            else{
+                std::cout << "Unknown field " << field << std::endl;
+            }
+        }
+    }
+    else if(table_name == "CONTRACT"){
+        auto el = m_db->Get_contract_db()->Get(id);
+        for(auto field : fields){
+            if(field == "MASTER"){
+                std::cout << el->Get_master_id() << std::endl;
+            }
+            else if(field == "CLIENT"){
+                std::cout << el->Get_client_id() << std::endl;
+            }
+            else if(field == "SERVICE"){
+                std::cout << el->Get_service_id() << std::endl;
+            }
+            else if(field == "DATE"){
+                std::cout << el->Get_date() << std::endl;
+            }
+            else if(field == "STATUS"){
+                std::cout << el->Get_status() << std::endl;
+            }
+
+            else{
+                std::cout << "Unknown field " << field << std::endl;
+            }
+        }
+    }
+    else{
+        throw std::runtime_error("Unknown table");
+    }
 }
