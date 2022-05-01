@@ -151,6 +151,14 @@ void Tools::Get_s(std::string table_name, std::vector<std::string> fields){
     }
     if(table_name == "CLIENT"){
         auto el = m_db->Get_client_db()->Get(id);
+        if(fields.size() == 0){
+            std::cout << "Put args (FIRST_NAME, LAST_NAME, FATHER_NAME, PHONE_NUMBER, CARD, EMAIL):\n> ";
+            std::string allwords;
+            std::getline(std::cin, allwords);
+            std::string word;
+            std::istringstream iss(allwords);
+            while(iss >> word) {fields.push_back(word); }
+        }
         for(auto field : fields){
             if(field == "FIRST_NAME"){
                 std::cout << el->Get_first_name() << std::endl;
@@ -177,6 +185,14 @@ void Tools::Get_s(std::string table_name, std::vector<std::string> fields){
     }
     else if(table_name == "MASTER"){
         auto el = m_db->Get_master_db()->Get(id);
+        if(fields.size() == 0){
+            std::cout << "Put args (FIRST_NAME, LAST_NAME, FATHER_NAME, PHONE_NUMBER, SALARY, EXPERIENCE):\n> ";
+            std::string allwords;
+            std::getline(std::cin, allwords);
+            std::string word;
+            std::istringstream iss(allwords);
+            while(iss >> word) {fields.push_back(word); }
+        }
         for(auto field : fields){
             if(field == "FIRST_NAME"){
                 std::cout << el->Get_first_name() << std::endl;
@@ -203,6 +219,14 @@ void Tools::Get_s(std::string table_name, std::vector<std::string> fields){
     }
     else if(table_name == "DEVICE"){
         auto el = m_db->Get_device_db()->Get(id);
+        if(fields.size() == 0){
+            std::cout << "Put args (NAME, MODEL, BREAKAGE):\n> ";
+            std::string allwords;
+            std::getline(std::cin, allwords);
+            std::string word;
+            std::istringstream iss(allwords);
+            while(iss >> word) {fields.push_back(word); }
+        }
         for(auto field : fields){
             if(field == "NAME"){
                 std::cout << el->Get_name() << std::endl;
@@ -220,6 +244,14 @@ void Tools::Get_s(std::string table_name, std::vector<std::string> fields){
     }
     else if(table_name == "SERVICE"){
         auto el = m_db->Get_service_db()->Get(id);
+        if(fields.size() == 0){
+            std::cout << "Put args (NAME, COST, TIME):\n> ";
+            std::string allwords;
+            std::getline(std::cin, allwords);
+            std::string word;
+            std::istringstream iss(allwords);
+            while(iss >> word) {fields.push_back(word); }
+        }
         for(auto field : fields){
             if(field == "NAME"){
                 std::cout << el->Get_name() << std::endl;
@@ -236,6 +268,14 @@ void Tools::Get_s(std::string table_name, std::vector<std::string> fields){
         }
     }
     else if(table_name == "OWNERSHIP"){
+        if(fields.size() == 0){
+            std::cout << "Put args (OWNER, DEVICE):\n> ";
+            std::string allwords;
+            std::getline(std::cin, allwords);
+            std::string word;
+            std::istringstream iss(allwords);
+            while(iss >> word) {fields.push_back(word); }
+        }
         auto el = m_db->Get_ownership_db()->Get(id);
         for(auto field : fields){
             if(field == "OWNER"){
@@ -251,6 +291,14 @@ void Tools::Get_s(std::string table_name, std::vector<std::string> fields){
     }
     else if(table_name == "SPECIALIZATION" || table_name == "SPECIAL"){
         auto el = m_db->Get_special_db()->Get(id);
+        if(fields.size() == 0){
+            std::cout << "Put args (MASTER, COST):\n> ";
+            std::string allwords;
+            std::getline(std::cin, allwords);
+            std::string word;
+            std::istringstream iss(allwords);
+            while(iss >> word) {fields.push_back(word); }
+        }
         for(auto field : fields){
             if(field == "MASTER"){
                 std::cout << el->Get_master_id() << std::endl;
@@ -264,6 +312,14 @@ void Tools::Get_s(std::string table_name, std::vector<std::string> fields){
         }
     }
     else if(table_name == "CONTRACT"){
+        if(fields.size() == 0){
+            std::cout << "Put args (MASTER, CLIENT, SERVICE, DATE, STATUS):\n> ";
+            std::string allwords;
+            std::getline(std::cin, allwords);
+            std::string word;
+            std::istringstream iss(allwords);
+            while(iss >> word) {fields.push_back(word); }
+        }
         auto el = m_db->Get_contract_db()->Get(id);
         for(auto field : fields){
             if(field == "MASTER"){

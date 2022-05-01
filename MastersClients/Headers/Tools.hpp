@@ -11,6 +11,7 @@
 #include "DataBase.hpp"
 #include <string>
 #include <vector>
+#include <sstream>
 #include <stdexcept>
 class Tools{
 public:
