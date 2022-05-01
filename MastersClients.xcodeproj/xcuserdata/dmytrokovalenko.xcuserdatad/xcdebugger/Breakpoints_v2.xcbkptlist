@@ -20,5 +20,143 @@
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4F066450-F304-4C39-BF9B-B60E7D52ACA9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MastersClients/Source/Tools.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "Tools::Get_m(table_name, id)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4F066450-F304-4C39-BF9B-B60E7D52ACA9 - 2c94e7014c10e906"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tools::Get_m(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;, std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;)"
+                  moduleName = "MastersClients"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmytrokovalenko/Documents/MastersClients/MastersClients/Source/Tools.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "932">
+               </Location>
+               <Location
+                  uuid = "4F066450-F304-4C39-BF9B-B60E7D52ACA9 - 2c94e7014c10e906"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tools::Get_m(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;, std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;)"
+                  moduleName = "MastersClients"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmytrokovalenko/Documents/MastersClients/MastersClients/Source/Tools.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "2065">
+               </Location>
+               <Location
+                  uuid = "4F066450-F304-4C39-BF9B-B60E7D52ACA9 - 2c94e7014c10e906"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tools::Get_m(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;, std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;)"
+                  moduleName = "MastersClients"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmytrokovalenko/Documents/MastersClients/MastersClients/Source/Tools.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "2892">
+               </Location>
+               <Location
+                  uuid = "4F066450-F304-4C39-BF9B-B60E7D52ACA9 - 2c94e7014c10e906"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tools::Get_m(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;, std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;)"
+                  moduleName = "MastersClients"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmytrokovalenko/Documents/MastersClients/MastersClients/Source/Tools.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "3526">
+               </Location>
+               <Location
+                  uuid = "4F066450-F304-4C39-BF9B-B60E7D52ACA9 - 2c94e7014c10e906"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tools::Get_m(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;, std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;)"
+                  moduleName = "MastersClients"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmytrokovalenko/Documents/MastersClients/MastersClients/Source/Tools.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "4237">
+               </Location>
+               <Location
+                  uuid = "4F066450-F304-4C39-BF9B-B60E7D52ACA9 - 2c94e7014c10e906"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tools::Get_m(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;, std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;)"
+                  moduleName = "MastersClients"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmytrokovalenko/Documents/MastersClients/MastersClients/Source/Tools.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "4871">
+               </Location>
+               <Location
+                  uuid = "4F066450-F304-4C39-BF9B-B60E7D52ACA9 - 2c94e7014c10e906"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tools::Get_m(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;, std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;)"
+                  moduleName = "MastersClients"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmytrokovalenko/Documents/MastersClients/MastersClients/Source/Tools.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "5794">
+               </Location>
+               <Location
+                  uuid = "4F066450-F304-4C39-BF9B-B60E7D52ACA9 - 2c94e7014c10e906"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tools::Get_m(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;, std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;)"
+                  moduleName = "MastersClients"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmytrokovalenko/Documents/MastersClients/MastersClients/Source/Tools.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "6070">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

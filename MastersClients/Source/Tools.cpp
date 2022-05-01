@@ -138,3 +138,101 @@ void Tools::Get_m(std::string table_name, std::string id){
         throw std::runtime_error("Unknown table");
     }
 }
+
+void Tools::Get_s(std::string table_name, std::vector<std::string> fields){
+    std::string ID;
+    int id;
+    try{
+        ID = fields[0];
+        id = std::stoi(ID);
+        fields.erase(fields.begin());
+    }catch(...){
+        throw std::runtime_error("Unknown id");
+    }
+    if(table_name == "CLIENT"){
+        auto el = m_db->Get_client_db()->Get(id);
+        for(auto field : fields){
+            if(field == "FIRST_NAME"){
+                std::cout << el->Get_first_name() << std::endl;
+            }
+            else if(field == "LAST_NAME"){
+                std::cout << el->Get_last_name() << std::endl;
+            }
+            else if(field == "FATHER_NAME"){
+                std::cout << el->Get_father_name() << std::endl;
+            }
+            else if(field == "PHONE_NUMBER"){
+                std::cout << el->Get_phone_number() << std::endl;
+            }
+            else if(field == "CARD"){
+                std::cout << el->Get_card() << std::endl;
+            }
+            else if(field == "EMAIL"){
+                std::cout << el->Get_email() << std::endl;
+            }
+            else{
+                std::cout << "Unknown field " << field << std::endl;
+            }
+        }
+    }
+    else if(table_name == "MASTER"){
+        auto el = m_db->Get_master_db()->Get(id);
+        for(auto field : fields){
+            if(field == "FIRST_NAME"){
+                std::cout << el->Get_first_name() << std::endl;
+            }
+            else if(field == "LAST_NAME"){
+                std::cout << el->Get_last_name() << std::endl;
+            }
+            else if(field == "FATHER_NAME"){
+                std::cout << el->Get_father_name() << std::endl;
+            }
+            else if(field == "PHONE_NUMBER"){
+                std::cout << el->Get_phone_number() << std::endl;
+            }
+            else if(field == "EXPERIENCE"){
+                std::cout << el->Get_experience() << std::endl;
+            }
+            else if(field == "SALARY"){
+                std::cout << el->Get_Salary() << std::endl;
+            }
+            else{
+                std::cout << "Unknown field " << field << std::endl;
+            }
+        }
+    }
+    else if(table_name == "DEVICE"){
+        auto el = m_db->Get_device_db()->Get(id);
+        for(auto field : fields){
+            if(field == "NAME"){
+                std::cout << el->Get_name() << std::endl;
+            }
+            else if(field == "MODEL"){
+                std::cout << el->Get_model() << std::endl;
+            }
+            else if(field == "BREAKAGE"){
+                std::cout << el->Get_breakage() << std::endl;
+            }
+            else{
+                std::cout << "Unknown field " << field << std::endl;
+            }
+        }
+    }
+    else if(table_name == "SERVICE"){
+        auto el = m_db->Get_service_db()->Get(id);
+        for(auto field : fields){
+            if(field == "NAME"){
+                std::cout << el->Get_name() << std::endl;
+            }
+            else if(field == "COST"){
+                std::cout << el->Get_cost() << std::endl;
+            }
+            else if(field == "TIME"){
+                std::cout << el->Get_time() << std::endl;
+            }
+            else{
+                std::cout << "Unknown field " << field << std::endl;
+            }
+        }
+    }
+}

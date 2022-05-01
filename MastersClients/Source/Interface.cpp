@@ -60,4 +60,13 @@ void Interface::DoStaff(){
             std::cout << "Error: " << ex.what() << std::endl;
         }
     }
+    if(what_to_do == "GET-S"){
+        std::string table_name = m_tokens[0];
+        m_tokens.erase(m_tokens.begin());
+        try{
+            m_tools->Get_s(table_name, m_tokens);
+        }catch(std::exception& ex){
+            std::cout << "Error: " << ex.what() << std::endl;
+        }
+    }
 }
