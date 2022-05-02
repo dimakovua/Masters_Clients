@@ -25,20 +25,38 @@ public:
     std::string Get_last_name(){
         return m_last_name;
     }
+    void Set_last_name(std::string last_name){
+        m_last_name = last_name;
+    }
     std::string Get_first_name(){
         return m_first_name;
+    }
+    void Set_first_name(std::string firtst_name){
+        m_first_name = firtst_name;
     }
     std::string Get_father_name(){
         return m_father_name;
     }
+    void Set_father_name(std::string father_name){
+        m_last_name = father_name;
+    }
     std::string Get_phone_number(){
         return m_phone_number;
+    }
+    void Set_phone_number(std::string phone){
+        m_phone_number = phone;
     }
     std::string Get_email(){
         return m_email;
     }
+    void Set_email(std::string email){
+        m_email = email;
+    }
     std::string Get_card(){
         return m_card;
+    }
+    void Set_card(std::string card){
+        m_card = card;
     }
     int Get_ID(){
         return m_id;
@@ -82,11 +100,29 @@ public:
     std::string Get_phone_number(){
         return m_phone_number;
     }
+    void Set_last_name(std::string last_name){
+        m_last_name = last_name;
+    }
+    void Set_first_name(std::string firtst_name){
+        m_first_name = firtst_name;
+    }
+    void Set_father_name(std::string father_name){
+        m_last_name = father_name;
+    }
+    void Set_phone_number(std::string phone){
+        m_phone_number = phone;
+    }
     std::string Get_experience(){
         return m_experience;
     }
+    void Set_experience(std::string exp){
+        m_experience = exp;
+    }
     std::string Get_Salary(){
         return m_salary;
+    }
+    void Set_Salary(std::string salary){
+        m_salary = salary;
     }
     int Get_ID(){
         return m_id;
@@ -113,11 +149,20 @@ public:
     std::string Get_name(){
         return m_name;
     }
+    void Set_name(std::string name){
+        m_name = name;
+    }
     std::string Get_model(){
         return m_model;
     }
+    void Set_model(std::string model){
+        m_model = model;
+    }
     std::string Get_breakage(){
         return m_breakage;
+    }
+    void Set_breakage(std::string breakage){
+        m_breakage = breakage;
     }
     int Get_ID(){
         return m_id;
@@ -145,11 +190,20 @@ public:
     std::string Get_name(){
         return m_service_name;
     }
+    void Set_name(std::string name){
+        m_service_name = name;
+    }
     std::string Get_time(){
         return m_time;
     }
+    void Set_time(std::string time){
+        m_time = time;
+    }
     std::string Get_cost(){
         return m_cost;
+    }
+    void Set_cost(std::string cost){
+        m_cost = cost;
     }
     int Get_ID(){
         return m_id;
@@ -175,8 +229,14 @@ public:
     std::string Get_owner_id(){
         return m_owner_id;
     }
+    void Set_owner_id(std::string owner){
+        m_owner_id = owner;
+    }
     std::string Get_device_id(){
         return m_device_id;
+    }
+    void Set_device_id(std::string device){
+        m_device_id = device;
     }
     int Get_ID(){
         return m_id;
@@ -202,8 +262,14 @@ public:
     std::string Get_master_id(){
         return m_master_id;
     }
+    void Set_master_id(std::string master){
+        m_master_id = master;
+    }
     std::string Get_service_id(){
         return m_service_id;
+    }
+    void Set_service_id(std::string service){
+        m_service_id = service;
     }
     int Get_ID(){
         return m_id;
@@ -233,11 +299,20 @@ public:
     std::string Get_service_id(){
         return m_service_id;
     }
+    void Set_service_id(std::string service){
+        m_service_id = service;
+    }
     std::string Get_master_id(){
         return m_master_id;
     }
+    void Set_master_id(std::string master){
+        m_master_id = master;
+    }
     std::string Get_client_id(){
         return m_client_id;
+    }
+    void Set_client_id(std::string client){
+        m_client_id = client;
     }
     int Get_ID(){
         return m_id;
@@ -245,8 +320,14 @@ public:
     std::string Get_date(){
         return m_date;
     }
+    void Set_date(std::string date){
+        m_date = date;
+    }
     std::string Get_status(){
         return m_status;
+    }
+    void Set_status(std::string status){
+        m_status = status;
     }
     std::string Get_table_name(){
         return "Contract";
