@@ -347,3 +347,319 @@ void Tools::Get_s(std::string table_name, std::vector<std::string> fields){
         throw std::runtime_error("Unknown table");
     }
 }
+
+
+void Tools::Update(std::string table_name, std::vector<std::string> args){
+    if(args.size() != 3){
+        throw std::logic_error("Not enough arguments!");
+    }
+    int id;
+    try{
+        id = std::stoi(args[0]);
+    }catch(...){
+        throw std::runtime_error("Invalid argument!");
+    }
+    if(table_name == "CLIENT"){
+        auto clients_db = m_db->Get_client_db();
+        std::shared_ptr<Client> el;
+        try{
+            el = clients_db->Get(id);
+        }catch(...){
+            throw std::runtime_error("Invalid ID");
+        }
+        if(args[1] == "FIRST_NAME"){
+            try{
+                el->Set_first_name(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else if(args[1] == "LAST_NAME"){
+            try{
+                el->Set_last_name(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else if (args[1] == "FATHER_NAME"){
+            try{
+                el->Set_father_name(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else if (args[1] == "PHONE_NUMBER"){
+            try{
+                el->Set_phone_number(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else if (args[1] == "EMAIL"){
+            try{
+                el->Set_email(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else if (args[1] == "CARD"){
+            try{
+                el->Set_card(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else{
+            throw std::logic_error("Invalid param!\nTry FIRTST_NAME/LAST_NAME/FATHER_NAME/PHONE_NUMBER/EMAIL/CARD\n");
+        }
+    }
+    else if(table_name == "MASTER"){
+        auto master_db = m_db->Get_master_db();
+        std::shared_ptr<Master> el;
+        try{
+            el = master_db->Get(id);
+        }catch(...){
+            throw std::runtime_error("Invalid ID");
+        }
+        if(args[1] == "FIRST_NAME"){
+            try{
+                el->Set_first_name(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else if(args[1] == "LAST_NAME"){
+            try{
+                el->Set_last_name(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else if (args[1] == "FATHER_NAME"){
+            try{
+                el->Set_father_name(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else if (args[1] == "PHONE_NUMBER"){
+            try{
+                el->Set_phone_number(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else if (args[1] == "EXPERIENCE"){
+            try{
+                el->Set_experience(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else if (args[1] == "SALARY"){
+            try{
+                el->Set_Salary(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else{
+            throw std::logic_error("Invalid param!\nTry FIRTST_NAME/LAST_NAME/FATHER_NAME/PHONE_NUMBER/SALARY/EXPERIENCE\n");
+        }
+    }
+    else if(table_name == "DEVICE"){
+        auto device_db = m_db->Get_device_db();
+        std::shared_ptr<Device> el;
+        try{
+            el = device_db->Get(id);
+        }catch(...){
+            throw std::runtime_error("Invalid ID");
+        }
+        if(args[1] == "NAME"){
+            try{
+                el->Set_name(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else if(args[1] == "MODEL"){
+            try{
+                el->Set_model(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else if (args[1] == "BREAKAGE"){
+            try{
+                el->Set_breakage(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else{
+            throw std::logic_error("Invalid param!\nTry NAME/MODEL/BREAKAGE\n");
+        }
+    }
+    else if(table_name == "OWNERSHIP"){
+        auto own_db = m_db->Get_ownership_db();
+        std::shared_ptr<Ownership> el;
+        try{
+            el = own_db->Get(id);
+        }catch(...){
+            throw std::runtime_error("Invalid ID");
+        }
+        if(args[1] == "OWNER_ID"){
+            try{
+                el->Set_owner_id(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else if(args[1] == "DEVICE_ID"){
+            try{
+                el->Set_device_id(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else{
+            throw std::logic_error("Invalid param!\nTry OWNER_ID/DEVICE_ID\n");
+        }
+    }
+    else if(table_name == "SERVICE"){
+        auto service_db = m_db->Get_service_db();
+        std::shared_ptr<Service> el;
+        try{
+            el = service_db->Get(id);
+        }catch(...){
+            throw std::runtime_error("Invalid ID");
+        }
+        if(args[1] == "NAME"){
+            try{
+                el->Set_name(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else if(args[1] == "TIME"){
+            try{
+                el->Set_time(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else if (args[1] == "COST"){
+            try{
+                el->Set_cost(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else{
+            throw std::logic_error("Invalid param!\nTry NAME/TIME/COST\n");
+        }
+    }
+    else if(table_name == "SPECIALIZATION"){
+        auto special_db = m_db->Get_special_db();
+        std::shared_ptr<Specialization> el;
+        try{
+            el = special_db->Get(id);
+        }catch(...){
+            throw std::runtime_error("Invalid ID");
+        }
+        if(args[1] == "MASTER_ID"){
+            try{
+                el->Set_master_id(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else if(args[1] == "SERVICE_ID"){
+            try{
+                el->Set_service_id(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else{
+            throw std::logic_error("Invalid param!\nTry MASTER_ID/SERVICE_ID\n");
+        }
+    }
+    if(table_name == "CONTRACT"){
+        auto contract_db = m_db->Get_contract_db();
+        std::shared_ptr<Contract> el;
+        try{
+            el = contract_db->Get(id);
+        }catch(...){
+            throw std::runtime_error("Invalid ID");
+        }
+        if(args[1] == "CLIENT_ID"){
+            try{
+                el->Set_client_id(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else if(args[1] == "MASTER_ID"){
+            try{
+                el->Set_master_id(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else if (args[1] == "SERVICE_ID"){
+            try{
+                el->Set_service_id(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else if (args[1] == "DATE"){
+            try{
+                el->Set_date(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else if (args[1] == "STATUS"){
+            try{
+                el->Set_status(args[2]);
+                std::cout << "Done!\n";
+            }catch(...){
+                std::runtime_error("Setting error!");
+            }
+        }
+        else{
+            throw std::logic_error("Invalid param!\nTry SERVICE_ID/CLIENT_ID/MASTER_ID/DATE/STATUS");
+        }
+    }
+    else{
+        throw std::logic_error("Unknown table!\nTry MASTER/CLIENT/DEVICE/OWNERSHIP/SPECIALIZATION/CONTRACT/SERVICE\n");
+    }
+}
