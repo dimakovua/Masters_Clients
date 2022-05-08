@@ -105,7 +105,12 @@ bool Tools::Add_m(std::string table_name, std::vector<std::string> args){
 }
 
 void Tools::Get_m(std::string table_name, std::string id){
-    int ID = std::stoi(id);
+    int ID;
+    try{
+        ID = std::stoi(id);
+    }catch(...){
+        throw std::runtime_error("Invalid ID");
+    }
     if(table_name == "MASTER"){
         auto el = m_db->Get_master_db()->Get(ID);
         std::cout << "---Master-" << el->Get_ID() << "---\n" << "First name:\t" << el->Get_first_name() << "\nLast name:\t" << el->Get_last_name() << "\nFather name:\t" << el->Get_father_name() << "\nPhone number:\t" << el->Get_phone_number() << "\nSalary:\t"<< el->Get_Salary() << "\nExperience:\t" << el->Get_experience() << std::endl;
@@ -418,6 +423,7 @@ void Tools::Update(std::string table_name, std::vector<std::string> args){
         else{
             throw std::logic_error("Invalid param!\nTry FIRTST_NAME/LAST_NAME/FATHER_NAME/PHONE_NUMBER/EMAIL/CARD\n");
         }
+        return;
     }
     else if(table_name == "MASTER"){
         auto master_db = m_db->Get_master_db();
@@ -478,6 +484,7 @@ void Tools::Update(std::string table_name, std::vector<std::string> args){
         else{
             throw std::logic_error("Invalid param!\nTry FIRTST_NAME/LAST_NAME/FATHER_NAME/PHONE_NUMBER/SALARY/EXPERIENCE\n");
         }
+        return;
     }
     else if(table_name == "DEVICE"){
         auto device_db = m_db->Get_device_db();
@@ -514,6 +521,7 @@ void Tools::Update(std::string table_name, std::vector<std::string> args){
         else{
             throw std::logic_error("Invalid param!\nTry NAME/MODEL/BREAKAGE\n");
         }
+        return;
     }
     else if(table_name == "OWNERSHIP"){
         auto own_db = m_db->Get_ownership_db();
@@ -542,6 +550,7 @@ void Tools::Update(std::string table_name, std::vector<std::string> args){
         else{
             throw std::logic_error("Invalid param!\nTry OWNER_ID/DEVICE_ID\n");
         }
+        return;
     }
     else if(table_name == "SERVICE"){
         auto service_db = m_db->Get_service_db();
@@ -578,6 +587,7 @@ void Tools::Update(std::string table_name, std::vector<std::string> args){
         else{
             throw std::logic_error("Invalid param!\nTry NAME/TIME/COST\n");
         }
+        return;
     }
     else if(table_name == "SPECIALIZATION"){
         auto special_db = m_db->Get_special_db();
@@ -606,6 +616,7 @@ void Tools::Update(std::string table_name, std::vector<std::string> args){
         else{
             throw std::logic_error("Invalid param!\nTry MASTER_ID/SERVICE_ID\n");
         }
+        return;
     }
     if(table_name == "CONTRACT"){
         auto contract_db = m_db->Get_contract_db();
@@ -658,6 +669,7 @@ void Tools::Update(std::string table_name, std::vector<std::string> args){
         else{
             throw std::logic_error("Invalid param!\nTry SERVICE_ID/CLIENT_ID/MASTER_ID/DATE/STATUS");
         }
+        return;
     }
     else{
         throw std::logic_error("Unknown table!\nTry MASTER/CLIENT/DEVICE/OWNERSHIP/SPECIALIZATION/CONTRACT/SERVICE\n");

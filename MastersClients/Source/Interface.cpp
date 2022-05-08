@@ -11,11 +11,11 @@ Interface::Interface(){
     m_tools = std::make_unique<Tools>();
 }
 
-void Interface::Command_getter(){
+bool Interface::Command_getter(){
     std::cout << "> ";
     std::getline(std::cin, m_command);
     Parser();
-    DoStaff();
+    return DoStaff();
 }
 
 void Interface::Parser(){
@@ -38,8 +38,11 @@ void Interface::Parser(){
 //    }
 }
 
-void Interface::DoStaff(){
+bool Interface::DoStaff(){
     std::string what_to_do = m_tokens[0]; //command
+    if(what_to_do == "STOP"){
+        return false;
+    }
     m_tokens.erase(m_tokens.begin());
     
     if(what_to_do == "ADD-M"){
@@ -78,4 +81,5 @@ void Interface::DoStaff(){
             std::cout << "Error: " << ex.what() << std::endl;
         }
     }
+    return true;
 }

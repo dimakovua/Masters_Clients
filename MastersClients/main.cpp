@@ -45,9 +45,13 @@ int main(int argc, const char * argv[]) {
     Tools aboba;
     bool a = aboba.Add_m("MASTER", {"peter", "a", "b", "c", "d", "e"});
     std::cout << "=======" << a << std::endl;
-    
-    Interface interf;
-    interf.Command_getter();
-    interf.Command_getter();
+    bool flag = 1;
+    Interface interface;
+    while(flag){
+        flag = interface.Command_getter();
+    }
+//    Interface interf;
+//    interf.Command_getter();
+//    interf.Command_getter();
     return 0;
 }

@@ -13,9 +13,9 @@
 class Interface{
 public:
     Interface();
-    void Command_getter();
+    bool Command_getter();
     void Parser();
-    void DoStaff();
+    bool DoStaff();
 private:
     std::unique_ptr<Tools> m_tools;
     std::string m_command;
