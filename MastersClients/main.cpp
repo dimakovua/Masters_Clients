@@ -42,9 +42,9 @@ int main(int argc, const char * argv[]) {
     master_db.Save(master_two);
     
     contr_db.Save(contract_one);
-    Tools aboba;
-    bool a = aboba.Add_m("MASTER", {"peter", "a", "b", "c", "d", "e"});
-    std::cout << "=======" << a << std::endl;
+   // Tools aboba;
+  //  bool a = aboba.Add_m("MASTER", {"peter", "a", "b", "c", "d", "e"});
+ //   std::cout << "=======" << a << std::endl;
     bool flag = 1;
     Interface interface;
     while(flag){

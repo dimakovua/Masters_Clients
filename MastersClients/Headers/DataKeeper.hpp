@@ -11,10 +11,11 @@
 #include <map>
 #include <iostream>
 #include <memory>
+#include <fstream>
 template<typename T>
 class DataKeeper{
-    std::map<int, std::shared_ptr<T>> m_data; //id to element
 public:
+    std::map<int, std::shared_ptr<T>> m_data;    //id to element
     bool Save(std::shared_ptr<T> element){
         if(!is_exist(element)){
             try{

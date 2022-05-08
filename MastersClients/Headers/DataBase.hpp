@@ -11,7 +11,6 @@
 #include "DataKeeper.hpp"
 #include "Tables.hpp"
 #include <memory>
-
 class DataBase{
 public:
     DataBase();
@@ -22,6 +21,7 @@ public:
     std::shared_ptr<DataKeeper<Device>> Get_device_db();
     std::shared_ptr<DataKeeper<Master>> Get_master_db();
     std::shared_ptr<DataKeeper<Specialization>> Get_special_db();
+    ~DataBase();
 private:
     std::shared_ptr<DataKeeper<Specialization>> special_db;
     std::shared_ptr<DataKeeper<Client>> client_db;//

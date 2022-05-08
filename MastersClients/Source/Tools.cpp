@@ -8,6 +8,7 @@
 #include "../Headers/Tools.hpp"
 
 Tools::Tools(){
+    m_db.release();
     m_db = std::make_unique<DataBase>();
 }
 
