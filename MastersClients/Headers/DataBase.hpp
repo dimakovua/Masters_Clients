@@ -23,6 +23,8 @@ public:
     std::shared_ptr<DataKeeper<Specialization>> Get_special_db();
     ~DataBase();
 private:
+    std::string Parse_stick(std::string& line);
+    void Open_file(std::string line);
     std::shared_ptr<DataKeeper<Specialization>> special_db;
     std::shared_ptr<DataKeeper<Client>> client_db;//
     std::shared_ptr<DataKeeper<Service>> serv_db;//

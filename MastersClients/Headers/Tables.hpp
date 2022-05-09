@@ -49,6 +49,10 @@ public:
     std::string Get_email(){
         return m_email;
     }
+    void Change_ID(int new_id){
+        m_id = new_id;
+        Client_ID = new_id;
+    }
     void Set_email(std::string email){
         m_email = email;
     }
@@ -78,7 +82,7 @@ private:
     int m_id;
     std::string m_experience;
     std::string m_salary;
-    std::string m_card;
+   // std::string m_card;
 public:
     Master(){
         
@@ -87,7 +91,10 @@ public:
         Master_ID++;
         m_id = Master_ID;
     }
-    
+    void Change_ID(int new_id){
+        m_id = new_id;
+        Master_ID = new_id;
+    }
     std::string Get_last_name(){
         return m_last_name;
     }
@@ -149,6 +156,10 @@ public:
     std::string Get_name(){
         return m_name;
     }
+    void Change_ID(int new_id){
+        m_id = new_id;
+        Device_ID = new_id;
+    }
     void Set_name(std::string name){
         m_name = name;
     }
@@ -183,6 +194,10 @@ public:
     Service(){
         
     }
+    void Change_ID(int new_id){
+        m_id = new_id;
+        Service_ID = new_id;
+    }
     Service(std::string service_name, std::string time, std::string cost) : m_service_name(service_name), m_time(time), m_cost(cost){
         Service_ID++;
         m_id = Service_ID;
@@ -211,6 +226,7 @@ public:
     std::string Get_table_name(){
         return "Service";
     }
+    
 };
 
 class Ownership{
@@ -221,6 +237,10 @@ class Ownership{
 public:
     Ownership(){
         
+    }
+    void Change_ID(int new_id){
+        m_id = new_id;
+        Ownership_ID = new_id;
     }
     Ownership(std::string owner_id, std::string device_id) : m_owner_id(owner_id), m_device_id(device_id){
         Ownership_ID++;
@@ -254,6 +274,10 @@ class Specialization{
 public:
     Specialization(){
         
+    }
+    void Change_ID(int new_id){
+        m_id = new_id;
+        Specialization_ID = new_id;
     }
     Specialization(std::string master_id, std::string service_id) : m_master_id(master_id), m_service_id(service_id){
         Specialization_ID++;
@@ -292,6 +316,10 @@ public:
     Contract(){
         
     }
+    void Change_ID(int new_id){
+        m_id = new_id;
+        Contract_ID = new_id;
+    }
     Contract(std::string service_id, std::string master_id, std::string client_id, std::string date, std::string status) : m_service_id(service_id), m_master_id(master_id), m_client_id(client_id), m_date(date), m_status(status){
         Contract_ID++;
         m_id = Contract_ID;
@@ -329,6 +357,7 @@ public:
     void Set_status(std::string status){
         m_status = status;
     }
+
     std::string Get_table_name(){
         return "Contract";
     }
