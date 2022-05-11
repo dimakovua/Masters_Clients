@@ -104,7 +104,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D37D10EB-111C-4470-9785-41F241924AEE"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MastersClients/Source/DataBase.cpp"
@@ -113,6 +113,22 @@
             startingLineNumber = "43"
             endingLineNumber = "43"
             landmarkName = "DataBase::Open_file(line)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B5FA8B17-F8E8-493B-98CB-5186FE83E6E2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MastersClients/Source/Tools.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "Tools::Delete(table_name, args)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

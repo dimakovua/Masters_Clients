@@ -15,7 +15,15 @@
 template<typename T>
 class DataKeeper{
 public:
-    std::map<int, std::shared_ptr<T>> m_data;    //id to element
+    std::map<int, std::shared_ptr<T>> m_data;//id to element
+    void Delete(int ID){
+        if(m_data.erase(ID)){
+            std::cout << "Done!\n";
+        }
+        else{
+            std::cout << "Doesn't exist but ok!\n";
+        }
+    }
     bool Save(std::shared_ptr<T> element){
         if(!is_exist(element)){
             try{

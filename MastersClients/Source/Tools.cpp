@@ -11,7 +11,66 @@ Tools::Tools(){
     m_db.release();
     m_db = std::make_unique<DataBase>();
 }
-
+void Tools::Delete(std::string table_name, std::vector<std::string> args){
+    int ID;
+    try{
+        ID = std::stoi(args[0]);
+    }catch(...){
+        throw std::logic_error("Invalid ID");
+    }
+    if(table_name == "MASTER"){
+        try{
+            m_db->Get_master_db()->Delete(ID);
+        }catch(...){
+            throw std::runtime_error("Cannot delete!");
+        }
+    }
+    else if(table_name == "CLIENT"){
+        try{
+            m_db->Get_client_db()->Delete(ID);
+        }catch(...){
+            throw std::runtime_error("Cannot delete!");
+        }
+    }
+    else if(table_name == "DEVICE"){
+        try{
+            m_db->Get_device_db()->Delete(ID);
+        }catch(...){
+            throw std::runtime_error("Cannot delete!");
+        }
+    }
+    else if(table_name == "OWNERSHIP"){
+        try{
+            m_db->Get_ownership_db()->Delete(ID);
+        }catch(...){
+            throw std::runtime_error("Cannot delete!");
+        }
+    }
+    else if(table_name == "SPECIALIZATION"){
+        try{
+            m_db->Get_special_db()->Delete(ID);
+        }catch(...){
+            throw std::runtime_error("Cannot delete!");
+        }
+    }
+    else if(table_name == "SERVICE"){
+        try{
+            m_db->Get_service_db()->Delete(ID);
+        }catch(...){
+            throw std::runtime_error("Cannot delete!");
+        }
+    }
+    else if(table_name == "CONTRACT"){
+        try{
+            m_db->Get_contract_db()->Delete(ID);
+        }catch(...){
+            throw std::runtime_error("Cannot delete!");
+        }
+    }
+    else{
+        std::cout << "Unknown table!\n";
+    }
+}
 bool Tools::Add_m(std::string table_name, std::vector<std::string> args){
     if(table_name == "MASTER"){
         if(args.size() != 6){
