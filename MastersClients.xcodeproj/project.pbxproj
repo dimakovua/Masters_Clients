@@ -33,6 +33,8 @@
 		E8422D8E281591430040C578 /* Tables.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tables.cpp; sourceTree = "<group>"; };
 		E8422D922815CC080040C578 /* DataKeeper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DataKeeper.hpp; sourceTree = "<group>"; };
 		E8979B16282D5A44002B22B1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E8979B17282D5E53002B22B1 /* DataBase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DataBase.png; path = ../../Desktop/DataBase.png; sourceTree = "<group>"; };
+		E8979B18282D5E53002B22B1 /* DataBase1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DataBase1.png; path = ../../Desktop/DataBase1.png; sourceTree = "<group>"; };
 		E8FA37AA2819592800B96976 /* Tools.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tools.hpp; sourceTree = "<group>"; };
 		E8FA37AB28195BC000B96976 /* DataBase.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DataBase.hpp; sourceTree = "<group>"; };
 		E8FA37AC28195BD400B96976 /* DataBase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DataBase.cpp; sourceTree = "<group>"; };
@@ -55,6 +57,8 @@
 		E8422D78281590BA0040C578 = {
 			isa = PBXGroup;
 			children = (
+				E8979B17282D5E53002B22B1 /* DataBase.png */,
+				E8979B18282D5E53002B22B1 /* DataBase1.png */,
 				E8979B16282D5A44002B22B1 /* README.md */,
 				E8422D83281590BA0040C578 /* MastersClients */,
 				E8422D82281590BA0040C578 /* Products */,
