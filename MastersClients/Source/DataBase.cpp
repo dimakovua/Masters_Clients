@@ -15,7 +15,7 @@ DataBase::DataBase(){
     device_db = std::make_shared<DataKeeper<Device>>();
     master_db = std::make_shared<DataKeeper<Master>>();
     special_db = std::make_shared<DataKeeper<Specialization>>();
-    std::cout << "I M HERE!\n";
+    //std::cout << "I M HERE!\n";
     
     std::string line;
     std::ifstream file("/Users/dmytrokovalenko/Documents/MastersClients/saving.txt");
@@ -30,13 +30,13 @@ std::string DataBase::Parse_stick(std::string& line){
     std::string result;
     auto stick_iter = std::find(line.begin(), line.end(), '|');
     if(stick_iter == line.end()){
-        std::cout << line << "\n";
+        //std::cout << line << "\n";
         return line;
     }
     else{
         result = std::string(line.begin(), stick_iter);
         line.erase(line.begin(), stick_iter+1);
-        std::cout << result << "\n";
+        //std::cout << result << "\n";
     }
     return result;
 }
@@ -127,39 +127,45 @@ std::shared_ptr<DataKeeper<Master>> DataBase::Get_master_db(){
 DataBase::~DataBase(){
     std::ofstream file;
     file.open("/Users/dmytrokovalenko/Documents/MastersClients/saving.txt");
-    if(!file.is_open()){
-        std::cout << "ERROR!";
+//    if(!file.is_open()){
+//        std::cout << "ERROR!";
+//    }
+//    else std::cout << "not error";
+    if(file.is_open()){
+        //file << "ABOBA!";
+        for(auto i : master_db->m_data){
+            file << "MASTERS|";
+            file << i.second->Get_ID() << "|" << i.second->Get_first_name() << "|" << i.second->Get_last_name() << "|" << i.second->Get_father_name() << "|" <<
+            i.second->Get_phone_number() << "|" << i.second->Get_experience() << "|" << i.second->Get_Salary() << "\n";
+        }
+        for(auto i : client_db->m_data){
+            file << "CLIENTS|";
+            file << i.second->Get_ID() << "|" << i.second->Get_first_name() << "|" << i.second->Get_last_name() << "|" << i.second->Get_father_name() << "|" << i.second->Get_phone_number() << "|" << i.second->Get_email() << "|" << i.second->Get_card() << "\n";
+        }
+        for(auto i : device_db->m_data){
+            file << "DEVICE|";
+            file << i.second->Get_ID() << "|" << i.second->Get_name() << "|" << i.second->Get_model() << "|" << i.second->Get_breakage() << "\n";
+        }
+        for(auto i : serv_db -> m_data){
+            file << "SERVICE|";
+            file << i.second->Get_ID() << "|" << i.second->Get_name() << "|" << i.second->Get_time() << "|" << i.second->Get_cost() << "\n";
+        }
+        for(auto i : own_db->m_data){
+            file << "OWNERSHIP|";
+            file << i.second->Get_ID() << "|" << i.second->Get_owner_id() << "|" << i.second->Get_device_id() << "\n";
+        }
+        for(auto i : special_db->m_data){
+            file << "SPECIALIZATION|";
+            file << i.second->Get_ID() << "|" << i.second->Get_master_id() << "|" << i.second->Get_service_id() << "\n";
+        }
+        for(auto i : contr_db->m_data){
+            file << "CONTRACT|";
+            file << i.second->Get_ID() << "|" << i.second->Get_service_id() << "|" <<  i.second->Get_master_id() << "|" << i.second->Get_client_id() << "|" << i.second->Get_date() << "|" << i.second->Get_status() << "\n";
+        }
+        file.close();
+        std::cout << "Saved!\nBye! :)\n";
     }
-    else std::cout << "not error";
-    //file << "ABOBA!";
-    for(auto i : master_db->m_data){
-        file << "MASTERS|";
-        file << i.second->Get_ID() << "|" << i.second->Get_first_name() << "|" << i.second->Get_last_name() << "|" << i.second->Get_father_name() << "|" <<
-        i.second->Get_phone_number() << "|" << i.second->Get_experience() << "|" << i.second->Get_Salary() << "\n";
+    else{
+        std::cout << "Error while reading savings!\n";
     }
-    for(auto i : client_db->m_data){
-        file << "CLIENTS|";
-        file << i.second->Get_ID() << "|" << i.second->Get_first_name() << "|" << i.second->Get_last_name() << "|" << i.second->Get_father_name() << "|" << i.second->Get_phone_number() << "|" << i.second->Get_email() << "|" << i.second->Get_card() << "\n";
-    }
-    for(auto i : device_db->m_data){
-        file << "DEVICE|";
-        file << i.second->Get_ID() << "|" << i.second->Get_name() << "|" << i.second->Get_model() << "|" << i.second->Get_breakage() << "\n";
-    }
-    for(auto i : serv_db -> m_data){
-        file << "SERVICE|";
-        file << i.second->Get_ID() << "|" << i.second->Get_name() << "|" << i.second->Get_time() << "|" << i.second->Get_cost() << "\n";
-    }
-    for(auto i : own_db->m_data){
-        file << "OWNERSHIP|";
-        file << i.second->Get_ID() << "|" << i.second->Get_owner_id() << "|" << i.second->Get_device_id() << "\n";
-    }
-    for(auto i : special_db->m_data){
-        file << "SPECIALIZATION|";
-        file << i.second->Get_ID() << "|" << i.second->Get_master_id() << "|" << i.second->Get_service_id() << "\n";
-    }
-    for(auto i : contr_db->m_data){
-        file << "CONTRACT|";
-        file << i.second->Get_ID() << "|" << i.second->Get_service_id() << "|" <<  i.second->Get_master_id() << "|" << i.second->Get_client_id() << "|" << i.second->Get_date() << "|" << i.second->Get_status() << "\n";
-    }
-    file.close();
 }
