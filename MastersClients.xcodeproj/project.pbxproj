@@ -27,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E82C0610283CB91A003AEB10 /* CMakeLists.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		E8422D81281590BA0040C578 /* MastersClients */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MastersClients; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8422D84281590BA0040C578 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E8422D8D2815912C0040C578 /* Tables.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tables.hpp; sourceTree = "<group>"; };
@@ -79,6 +80,7 @@
 				E8422D8C281591180040C578 /* Source */,
 				E8422D8B2815910D0040C578 /* Headers */,
 				E8422D84281590BA0040C578 /* main.cpp */,
+				E82C0610283CB91A003AEB10 /* CMakeLists.txt */,
 			);
 			path = MastersClients;
 			sourceTree = "<group>";
@@ -137,6 +139,7 @@
 				TargetAttributes = {
 					E8422D80281590BA0040C578 = {
 						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 1330;
 					};
 				};
 			};
@@ -286,16 +289,31 @@
 		E8422D89281590BA0040C578 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		E8422D8A281590BA0040C578 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
